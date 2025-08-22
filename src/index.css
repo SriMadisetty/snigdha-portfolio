@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sri Snigdha Portfolio Design System */
+
+@layer base {
+  :root {
+    /* Portfolio Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+    
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+    
+    /* Primary Brand Blue #007BFF */
+    --primary: 212 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 212 100% 60%;
+    
+    /* Secondary Dark Gray #333 */
+    --secondary: 0 0% 20%;
+    --secondary-foreground: 0 0% 100%;
+    
+    /* Accent Orange #F97316 */
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 212 100% 50%;
+    
+    --radius: 0.75rem;
+    
+    /* Portfolio Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(212 100% 50%), hsl(25 95% 53%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --gradient-section: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 99%));
+    
+    /* Portfolio Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(212 100% 50% / 0.1);
+    --shadow-glow: 0 0 40px hsl(212 100% 50% / 0.15);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.1);
+    
+    /* Portfolio Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 0 0% 8%;
+    --foreground: 0 0% 95%;
+    
+    --card: 0 0% 10%;
+    --card-foreground: 0 0% 95%;
+    
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 95%;
+    
+    --primary: 212 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 212 100% 60%;
+    
+    --secondary: 0 0% 15%;
+    --secondary-foreground: 0 0% 95%;
+    
+    --accent: 25 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+    
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 212 100% 50%;
+    
+    /* Dark mode gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(212 100% 50%), hsl(25 95% 53%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 10%), hsl(0 0% 12%));
+    --gradient-section: linear-gradient(180deg, hsl(0 0% 8%), hsl(0 0% 10%));
+    
+    /* Dark mode shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(0 0% 0% / 0.3);
+    --shadow-glow: 0 0 40px hsl(212 100% 50% / 0.2);
+    --shadow-card: 0 10px 30px -10px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-primary/30 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary/50;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-hero bg-clip-text text-transparent;
+  }
+}
