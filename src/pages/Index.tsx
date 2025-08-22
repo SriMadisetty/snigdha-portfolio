@@ -41,7 +41,8 @@ const Index = () => {
         "Built scalable frontend features for an investment analytics platform using React and Plotly, supporting 10,000+ active users",
         "Created interactive dashboards and data visualizations, boosting user engagement by 30%",
         "Deployed frontend components on AWS S3, working with backend auto-scaling on EC2 to maintain 99.9% uptime",
-        "Contributed to Jenkins CI/CD pipelines for frontend releases, reducing deployment cycles by 20%"
+        "Contributed to Jenkins CI/CD pipelines for frontend releases, reducing deployment cycles by 20%",
+        "Designed and developed code using MVC architecture with angular js"
       ]
     },
     {
